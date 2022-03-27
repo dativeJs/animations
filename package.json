@@ -1,0 +1,52 @@
+{
+  "name": "@dativejs/animate",
+  "version": "1.0.0",
+  "description": "Animation Plugin For Dativejs",
+  "main": "dist/dative-animate.cjs.js",
+  "module": "dist/dative-animate.runtime.esm.js",
+  "types": "types/index.d.ts",
+  "unpkg": "dist/dative-animate.global.js",
+  "jsdelivr": "dist/dative-animate.global.js",
+  "files": [
+    "index.js",
+    "index.mjs",
+    "dist"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=production rollup -c"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "node": "./index.mjs",
+        "default": "./dist/dative-animate.runtime.esm.js"
+      },
+      "require": "./index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "buildOptions": {
+    "name": "dative-animate",
+    "formats": [
+      "esm-bundler",
+      "cjs",
+      "global"
+    ]
+  },
+  "keywords": [
+    "Animation",
+    "Dativejs",
+    "Pizzle",
+    "PizzleJs"
+  ],
+  "author": "Tobithedev <ucheemekatobi@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobithedev/dative-animation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tobithedev/dative-animation/issues"
+  },
+  "homepage": "https://tobithedev.github.io/dative-animation"
+}
