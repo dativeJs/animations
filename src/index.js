@@ -130,10 +130,58 @@ export function swing({ animate, duration, delay }) {
 }
 
 
-export function slide({ animate, duration, delay }) {
-
+export function slideFromRight({ animate, duration, delay }) {
+animate(
+  [
+    {transform: "translateX(20px)",opacity:"0"},
+    {transform: "translateX(0)", opacity: "1"},
+  ],
+  {
+    delay,
+    duration,
+    easing: "ease-in-out",
+  }
+)
 }
-
+export function slideFromLeft({ animate, duration, delay }) {
+  animate(
+    [
+      {transform: "translateX(-20px)",opacity:"0"},
+      {transform: "translateX(0)", opacity: "1"},
+    ],
+    {
+      delay,
+      duration,
+      easing: "ease-in-out",
+    }
+  )
+  }
+  export function slideFromBottom({ animate, duration, delay }) {
+    animate(
+      [
+        {transform: "translateY(20px)",opacity:"0"},
+        {transform: "translateY(0)", opacity: "1"},
+      ],
+      {
+        delay,
+        duration,
+        easing: "ease-in-out",
+      }
+    )
+    }
+    export function slideFromTop({ animate, duration, delay }) {
+      animate(
+        [
+          {transform: "translateY(-20px)",opacity:"0"},
+          {transform: "translateY(0)", opacity: "1"},
+        ],
+        {
+          delay,
+          duration,
+          easing: "ease-in-out",
+        }
+      )
+      }
 export default {
   fadeIn,
   fadeOut,
@@ -141,4 +189,8 @@ export default {
   swing,
   bubble,
   flip,
+  slideFromLeft,
+  slideFromBottom,
+  slideFromTop,
+  slideFromRight,
 };
