@@ -2,24 +2,26 @@
   "name": "@dativejs/animate",
   "version": "1.0.0",
   "description": "Animation Plugin For Dativejs",
-  "main": "dist/dative-animate.cjs.js",
-  "module": "dist/dative-animate.runtime.esm.js",
+  "main": "src/index.js",
+  "module": "dist/dative-animate.esm.js",
   "types": "types/index.d.ts",
-  "unpkg": "dist/dative-animate.global.js",
-  "jsdelivr": "dist/dative-animate.global.js",
+  "unpkg": "dist/dative-animate.js",
+  "jsdelivr": "dist/dative-animate.js",
   "files": [
     "index.js",
     "index.mjs",
-    "dist"
+    "dist",
+    "src",
+    "types",
   ],
   "scripts": {
-    "build": "NODE_ENV=production rollup -c"
+    "build": "rollup -c"
   },
   "exports": {
     ".": {
       "import": {
         "node": "./index.mjs",
-        "default": "./dist/dative-animate.runtime.esm.js"
+        "default": "./dist/dative-animate.esm.js"
       },
       "require": "./index.js"
     },
@@ -37,9 +39,15 @@
     "Animation",
     "Dativejs",
     "Pizzle",
-    "PizzleJs"
+    "PizzleJs",
+    "Javascript",
+    "Aos",
+    "Framer Motion"
   ],
-  "author": "Gideon Appau <gideonad.codez@gmail.com>",
+  "author": "Tobithealpha <ucheemekatobi@gmail.com>",
+  "contributors": [
+    "Gideon Appau <gideonad.codez@gmail.com>"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
