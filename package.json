@@ -13,6 +13,7 @@
     "dist",
     "src",
     "types",
+    "rollup.config.js", 
   ],
   "scripts": {
     "build": "rollup -c"
